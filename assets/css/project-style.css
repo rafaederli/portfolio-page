@@ -115,30 +115,22 @@ a {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.content__screen {
-    display: flex;
-}
-
 .content__smartphone-screen {
-    width: 50px;
+    width: 100px;
 }
 
 .content__smartphone-title {
     font-size: var(--small-size);
     font-weight: var(--regular-weight);
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
 }
 
 .content__tablet-screen {
-    width: 172px;
+    width: 170px;
 }
 
 .content__tablet-title {
     font-size: var(--large-size);
     font-weight: var(--regular-weight);
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
 }
 
 .content__previews {
@@ -186,23 +178,16 @@ a {
         grid-template-columns: 2fr 1fr;
     }
 
-    .content__screen {
-        display: flex;
-        column-gap: 1rem;
-    }
-
     .content__smartphone-screen {
-        width: 86px;
+        width: 210px;
     }
 
     .content__tablet-screen {
-        width: 296px;
+        width: 350px;
     }
 
     .content__smartphone-title,
     .content__tablet-title {
-        writing-mode: horizontal-tb;
-        transform: none;
         display: flex;
         align-items: flex-end;
     }
