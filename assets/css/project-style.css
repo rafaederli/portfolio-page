@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    /* Font */
+    --body-font: 'Poppins', sans-serif;
+
+    /* Font Weight */
+    --light-weight: 300;
+    --regular-weight: 400;
+    --semi-bold: 600;
+
+    /* Font Size */
+    --small-size: 0.75rem;
+    --medium-size: 0.875rem;
+    --large-size: 1.25rem;
+
+    /* Fill Color */
+    --fc-body-background-color: #1F2024;
+    --fc-elements-color: #424742;
+    --fc-border-color: #717A71;
+
+    /* Text Color */
+    --tc-default: #6C6D70;
+    --tc-projects: white;
+
+    /* Width and Padding*/
+    --default-width: 17.1875rem;
+    --default-padding: 3.125rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--tc-default);
+    background-color: var(--fc-body-background-color);
+    font-family: var(--body-font);
+}
+
+main {
+    height: 2px;
+    width: 2px;
+    background-color: rgba(113, 122, 113, 0.4);
+    margin: var(--default-padding) auto;
+    overflow: hidden;
+}
+
+.show-width {
+    background-color: transparent;
+    width: var(--default-width);
+    transition: 1s;
+}
+
+.show-height {
+    border-bottom: 2px solid var(--fc-border-color);
+    border-top: 2px solid var(--fc-border-color);
+    height: 100%;
+    padding-bottom: var(--default-padding);
+}
+
+a {
+    text-decoration: none;
+}
+
+.home-icon {
+    position: fixed;
+    top: 4.5rem;
+    right: calc((100vw - var(--default-width)) / 2);
+    color: white;
+    font-size: var(--large-size);
+}
+
+.presentation {
+    display: grid;
+    row-gap: calc(var(--default-padding) / 2);
+    margin-top: var(--default-padding);
+}
+
+.presentation__title {
+    font-size: var(--medium-size);
+    font-weight: var(--semi-bold);
+}
+
+.presentation__description {
+    font-size: var(--small-size);
+    font-weight: var(--light-weight);
+    text-align: justify;
+}
+
+.video {
+    margin-top: var(--default-padding);
+    display: grid;
+    row-gap: calc(var(--default-padding) / 2);
+}
+
+.video__icon {
+    color: var(--tc-default);
+    font-size: var(--large-size);
+}
+
+.content {
+    margin-top: var(--default-padding);
+    display: grid;
+    row-gap: calc(var(--default-padding) / 2);
+}
+
+.content__title {
+    font-size: var(--medium-size);
+    font-weight: var(--regular-weight);
+}
+
+.content__image {
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.content__screens {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.content__screen {
+    display: flex;
+}
+
+.content__smartphone-screen {
+    width: 50px;
+}
+
+.content__smartphone-title {
+    font-size: var(--small-size);
+    font-weight: var(--regular-weight);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+.content__tablet-screen {
+    width: 172px;
+}
+
+.content__tablet-title {
+    font-size: var(--large-size);
+    font-weight: var(--regular-weight);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+.content__previews {
+    display: grid;
+    row-gap: calc(var(--default-padding) / 2);
+}
+
+.content__preview {
+    width: 100%;
+}
+
+.content__designs {
+    display: grid;
+    row-gap: calc(var(--default-padding) / 2);
+}
+
+.content__design {
+    display: flex;
+}
+
+.content__design-image {
+    width: calc(275px - 18px);
+}
+
+.content__label {
+    font-size: var(--small-size);
+    font-weight: var(--light-weight);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+.copyright {
+    margin-top: var(--default-padding);
+    font-size: 0.4rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --default-width: 35.5rem;
+    }
+
+    .content__screens {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .content__screen {
+        display: flex;
+        column-gap: 1rem;
+    }
+
+    .content__smartphone-screen {
+        width: 86px;
+    }
+
+    .content__tablet-screen {
+        width: 296px;
+    }
+
+    .content__smartphone-title,
+    .content__tablet-title {
+        writing-mode: horizontal-tb;
+        transform: none;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .content__previews,
+    .content__designs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: calc(var(--default-padding) / 2);
+    }
+
+    .content__design {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content__design-image {
+        width: calc(275px - 18px);
+    }
+
+    .content__label {
+        writing-mode: horizontal-tb;
+        transform: rotate(0);
+    }
+}
